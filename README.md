@@ -1,4 +1,4 @@
-[Comic Writer Services](http://comicwriterservices.com/) is a website that I currently run via Scriptogram and a single text file sitting in a dedicated Dropbox folder. 
+[Comic Writer Services](http://comicwriterservices.com/) is a resource for aspiring and experienced comic book writers. 
 
 The aim of the website was to improve on, and update, a similar resource that [Caleb Monroe](http://calebmonroe.com/blog/) had compiled many years ago for aspiring comic book writers. 
 
