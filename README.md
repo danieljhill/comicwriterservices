@@ -1,3 +1,7 @@
+This is forked from Daniel Hill's repo. All the hard work in gathering links is credited to Daniel Hill and Caleb Monro. https://github.com/danieljhill/comicwriterservices
+
+## Original Repo - Read Me Notes
+
 [Comic Writer Services](http://comicwriterservices.com/) is a resource for aspiring and experienced comic book writers. 
 
 The aim of the website was to improve on, and update, a similar resource that [Caleb Monroe](http://calebmonroe.com/blog/) had compiled many years ago for aspiring comic book writers. 
