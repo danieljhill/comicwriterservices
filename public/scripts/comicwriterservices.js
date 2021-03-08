@@ -37,6 +37,8 @@ const app = new Vue({
         filterArticles: function() {
             this.clearArticleFilters();
             this.addFilterToArticles();
+
+            console.log("Test");
         },
         clearArticleFilters: function() {
             this.articles.forEach(articleObj => {

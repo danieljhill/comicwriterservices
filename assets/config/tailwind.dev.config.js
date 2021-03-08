@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
 	enabled: false,
-	content: ['./index.html', './public/scripts/chat.js']
+	content: ['./**/*.html', './public/**/*.js']
 	},
   darkMode: false,
   theme: {
