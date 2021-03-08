@@ -24,7 +24,9 @@ Running either of those commands will export a Tailwinds CSS stylesheet to the p
 
 ```npm run exportjson```
 
-Running this command will export data from the spreadsheet "Comic Writer Services.xlsx". To export all data, run the command "npm run exportjson". In the spreadsheet, if you want to ignore any links, type "x" or any character in the "Ignore" column. If you want the process to ignore a worksheet, prefix the name of the worksheet with a dash "-" e.g. "-Editors". This means the Editors worksheet will be ignored.
+Running this command will export data from the spreadsheet "Comic Writer Services.xlsx". 
+
+To export all data, run the command ```npm run exportjson```. In the spreadsheet, if you want to ignore any links, type "x" or any character in the "Ignore" column. If you want the process to ignore a worksheet, prefix the name of the worksheet with a dash "-" e.g. "-Editors". This means the Editors worksheet will be ignored.
 
 
 ## Original Repo - Read Me Notes
