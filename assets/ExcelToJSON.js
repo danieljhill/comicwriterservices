@@ -3,11 +3,11 @@ const fs = require('fs');
 const reader = require('xlsx');
 
 const jsonFileName = "./data/data.json";
-const file = reader.readFile("./datasource/Comic Writer Services.xlsx");
+const file = reader.readFile("./assets/datasource/Comic Writer Services.xlsx");
 
 let data = {
     authors: [],
-    categories:[],
+    articles:[],
 }
 
 function createAuthor(fullname) {
@@ -47,6 +47,13 @@ const sheets = file.SheetNames;
 for(let i = 0; i < sheets.length; i++) 
 { 
    const sheetName = file.SheetNames[i];
+
+    // CHECK IF WE SHOULD EXPORT THIS WORKSHEET
+    if (sheetName.trim().substring(0,1) === "-") {
+        console.log("Found ignored worksheet")
+        break;
+    }
+
    const temp = reader.utils.sheet_to_json(file.Sheets[file.SheetNames[i]]);
 
    let sheetData = {
@@ -60,7 +67,6 @@ for(let i = 0; i < sheets.length; i++)
             return;
         }
     }
-
 
       let linkData = {
          Title: "",
@@ -113,7 +119,7 @@ for(let i = 0; i < sheets.length; i++)
    })
 
 
-   data.categories.push(sheetData);
+   data.articles.push(sheetData);
 }
 
 // REMOVE "NOT KNOWN" BEFORE SORTING.

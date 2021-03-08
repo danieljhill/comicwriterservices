@@ -6,14 +6,16 @@
   "dependencies": {
     "export-from-json": "^1.3.4",
     "read-excel-file": "^5.0.0",
+    "tailwindcss": "^2.0.3",
+    "vue": "^2.6.12",
     "xlsx": "^0.16.9"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss-cli@latest build ./src/tailwind.css -c ./config/tailwind.dev.config.js -o ./public/css/ts/ts.css",
-	  "prod": "npx tailwindcss-cli@latest build ./src/tailwind.css -c ./config/tailwind.prod.config.js -o ./public/css/ts/ts.css",
-    "exportjson": "node.exe .\\ExcelToJSON.js"
+    "dev": "npx tailwindcss-cli@latest build ./assets/src/tailwind.css -c ./assets/config/tailwind.dev.config.js -o ./public/css/ts/ts.css",
+    "prod": "npx tailwindcss-cli@latest build ./assets/src/tailwind.css -c ./assets/config/tailwind.prod.config.js -o ./public/css/ts/ts.css",
+    "exportjson": "node.exe .\\assets\\ExcelToJSON.js"
   },
   "repository": {
     "type": "git",

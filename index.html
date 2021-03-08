@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="public/css/ts/ts.css" media="screen"/>
+    <script type="text/javascript" src="public/scripts/vue/vue.min.js"></script>
+</head>
+<body>
+    <div id="app" class="ml-4 mr-4 mt-2">
+        <div class="rounded bg-blue-200 p-2 text-black">
+            <h1>Comic Writer Services</h1>
+        </div>
+        <div class="clear-both">
+        </div>
+
+        <div class="flex">
+            <!-- AUTHORS -->
+            <div class="mt-2">
+                <div class="bg-blue-200 rounded-t-lg p-1">
+                    <h3>Authors</h3>
+                </div>
+                <div v-on:click="clearFilteredAuthors" class="mt-1 text-center">
+                    <button class="rounded p-2 bg-blue-600 text-white">Clear Selection</button>
+                </div>
+                <div v-for="authorObj in authors" class="flex flex-wrap">
+                    <p>
+                        <input type="checkbox" class="mr-2" v-model="filteredAuthors" v-bind:value="authorObj" @change="filterArticles"/>
+                        <label v-bind:for="authorObj">{{ authorObj.fullname }}</label>
+                    </p>
+                </div>
+            </div>
+
+            <!-- LINKS -->
+            <div class="flex-1 rounded ml-2 mt-2">
+                <div v-for="articlesObj in articles" class="mb-4">
+                    <div class="bg-blue-200 rounded-t-lg p-2">
+                        <h3>{{ articlesObj.category }}</h3>
+                    </div>
+                    <div v-for="linkObj in articlesObj.links" class="mb-2 rounded bg-gray-100 p-2" :class="linkObj.filterCSS">
+                        <p>{{ linkObj.Title }}</p>
+                        <p><a v-bind:href="linkObj.Link" class="text-blue-600 visited:text-purple-600" target="_blank">{{ linkObj.Link }}</a></p>
+                        <p><button v-for="authorObj in linkObj.Authors" v-on:click="addAuthorToFilter(authorObj)" class="mr-2">{{ authorObj.fullname }}</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</body>
+<script type="application/javascript" src="public/scripts/comicwriterservices.js"></script>
+</html>
